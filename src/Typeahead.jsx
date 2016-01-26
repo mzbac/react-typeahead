@@ -14,7 +14,6 @@ export class Typeahead extends React.Component {
     }
 
     render() {
-        var that =this;
         if (this.state.source && this.state.input&&!this.state.selected)
             var options = this.state.source.filter((x) => {
                 return (x.get(this.props.displayItemName).toUpperCase().indexOf(this.state.input.toUpperCase()) !== -1)
@@ -44,8 +43,7 @@ export class Typeahead extends React.Component {
     }
 
     onBlur(event) {
-        //if (event.target.value !== this.state.select)
-        //    this.setState({input: ''});
+
     }
     select(value){
         this.setState({input:value.get(this.props.displayItemName),select: value.get(this.props.displayItemName),selected:true});
