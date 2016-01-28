@@ -1,5 +1,6 @@
 import React from 'react';
 import Immutable from 'immutable';
+import ReactCSSTransitionGroup  from 'react-addons-css-transition-group';
 export class Typeahead extends React.Component {
     constructor(props) {
         super(props);
@@ -31,12 +32,16 @@ export class Typeahead extends React.Component {
                        onBlur={this.onBlur.bind(this)}
                 />
             </div>
-            <div className="list-group" style={{maxHeight: this.props.maxHeight,
+            <div className="list-group " style={{maxHeight: this.props.maxHeight,
                                             width:'100%',
                                             overflowY:'auto',
+                                            overflowX:'hidden',
                                             position:'absolute',
                                             zIndex: '1'}}>
-                {options}
+                <ReactCSSTransitionGroup transitionName="fadeIn" transitionEnterTimeout={500}
+                                         transitionLeaveTimeout={300}>
+                    {options}
+                </ReactCSSTransitionGroup>
             </div>
 
         </div>);
