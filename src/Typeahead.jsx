@@ -33,6 +33,7 @@ export class Typeahead extends React.Component {
                 />
             </div>
             <div className="list-group " style={{maxHeight: this.props.maxHeight,
+                                            backgroundColor:'#fff',
                                             width:'100%',
                                             overflowY:'auto',
                                             overflowX:'hidden',
