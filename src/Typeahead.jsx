@@ -36,7 +36,6 @@ export class Typeahead extends React.Component {
                                             width:'100%',
                                             overflowY:'auto',
                                             overflowX:'hidden',
-                                            position:'absolute',
                                             zIndex: '1'}}>
                 <ReactCSSTransitionGroup transitionName="fadeIn" transitionEnterTimeout={500}
                                          transitionLeaveTimeout={300}>
